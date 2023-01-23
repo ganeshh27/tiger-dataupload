@@ -1,0 +1,44 @@
+.navigation {
+  height: 70px;
+  width: 100%;
+  background: linear-gradient(
+    to left,
+    rgb(184, 229, 190) 0%,
+    rgb(237, 240, 233) 100%
+  );
+  display: flex;
+
+  margin-bottom: 2px;
+}
+
+.navigation .logo-container {
+  height: 100%;
+  width: 70px;
+  padding: 25px;
+}
+
+.navigation #logo-title {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 800;
+  justify-content: center;
+  font-size: large;
+  padding-left: 25px;
+  padding-top: 10px;
+}
+
+.navigation .nav-links-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 10px;
+  color: darkgreen;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+}
+.nav-links-container .nav-link {
+  padding: 10px 15px;
+  cursor: pointer;
+}

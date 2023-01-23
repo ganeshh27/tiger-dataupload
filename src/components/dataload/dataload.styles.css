@@ -1,0 +1,17 @@
+.upload-form {
+  align-items: left;
+  width: fit-content;
+  min-height: 400px !important;
+}
+.upload-header {
+  display: block;
+  font-weight: 600;
+  font-size: large;
+}
+
+.upload-input {
+  display: block;
+  font-size: large;
+  font-weight: bolder;
+  margin: 10px !important;
+}
