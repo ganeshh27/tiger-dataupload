@@ -1,7 +1,19 @@
 const Products = require('./../../models/productSchema');
 
 async function getProducts(req, res) {
-  let productlist = await Products.find({}, { _id: 0, __v: 0 }).lean();
+  let { offset, limit, ...query } = req.query;
+
+  let productlist = await Products.find(query, { _id: 0, __v: 0 }).lean();
+
+  if (offset == undefined) {
+    offset = 0;
+  }
+  if (limit == undefined) {
+    limit = productlist.length;
+  }
+
+  productlist = productlist.slice(offset, offset + limit);
+
   console.log('total products', productlist.length);
   return res.status(200).send(productlist);
 }
